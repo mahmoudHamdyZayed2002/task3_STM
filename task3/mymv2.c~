@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+int main(int argc , char *argv[])
+{
+        printf("argc = %d\n",argc);
+        if(argc != 3)
+	{
+		printf("error usag \n");
+	}
+        rename(argv[1],argv[2]);
+	return 0;
+}
